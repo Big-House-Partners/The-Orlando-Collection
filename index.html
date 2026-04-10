@@ -131,7 +131,27 @@
 
         .videos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Ledyard Bank section - make it span 2 columns and larger */
+        .ledyard-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .ledyard-grid .video-card {
+            grid-column: 1;
+        }
+
+        /* One Local and Cambridge College side by side above Ledyard */
+        .paired-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             margin-bottom: 3rem;
         }
@@ -216,7 +236,13 @@
                 padding: 2rem 1rem;
             }
 
-            .videos-grid {
+            .videos-grid,
+            .paired-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .ledyard-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
@@ -288,32 +314,27 @@
                 </div>
             </div>
 
-            <!-- One Local -->
+            <!-- One Local and Cambridge College side by side -->
             <div class="project-group">
-                <h2 class="org-title">One Local</h2>
-                <div class="videos-grid">
+                <h2 class="org-title">One Local & Cambridge College</h2>
+                <div class="paired-grid">
                     <div class="video-card">
                         <div class="video-iframe-container">
                             <iframe src="https://player.vimeo.com/video/855467404?h=&autoplay=0" allowfullscreen="" allow="autoplay" loading="lazy"></iframe>
                         </div>
                         <div class="video-info">
                             <h3 class="video-title">Daily Routine</h3>
+                            <p style="color: var(--accent-subtle); font-size: 0.9rem; margin-bottom: 0.5rem;">One Local</p>
                             <a href="https://vimeo.com/855467404?fl=tl&fe=ec" target="_blank" class="video-link">Watch on Vimeo →</a>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Cambridge College -->
-            <div class="project-group">
-                <h2 class="org-title">Cambridge College</h2>
-                <div class="videos-grid">
                     <div class="video-card">
                         <div class="video-iframe-container">
                             <iframe src="https://player.vimeo.com/video/913371469?h=&autoplay=0" allowfullscreen="" allow="autoplay" loading="lazy"></iframe>
                         </div>
                         <div class="video-info">
                             <h3 class="video-title">School Days</h3>
+                            <p style="color: var(--accent-subtle); font-size: 0.9rem; margin-bottom: 0.5rem;">Cambridge College</p>
                             <a href="https://vimeo.com/913371469?fl=tl&fe=ec" target="_blank" class="video-link">Watch on Vimeo →</a>
                         </div>
                     </div>
@@ -323,7 +344,7 @@
             <!-- Ledyard Bank -->
             <div class="project-group">
                 <h2 class="org-title">Ledyard Bank</h2>
-                <div class="videos-grid">
+                <div class="ledyard-grid">
                     <div class="video-card">
                         <div class="video-iframe-container">
                             <iframe src="https://player.vimeo.com/video/933750428?h=&autoplay=0" allowfullscreen="" allow="autoplay" loading="lazy"></iframe>
