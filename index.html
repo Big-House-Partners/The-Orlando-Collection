@@ -28,7 +28,6 @@
             overflow-x: hidden;
         }
 
-        /* Header */
         header {
             padding: 2rem 2rem 3rem 2rem;
             text-align: center;
@@ -82,14 +81,12 @@
             letter-spacing: 0.5px;
         }
 
-        /* Main Container */
         main {
             max-width: 1400px;
             margin: 0 auto;
             padding: 4rem 2rem;
         }
 
-        /* Projects Grid */
         .projects {
             display: grid;
             gap: 3rem;
@@ -136,7 +133,6 @@
             margin-bottom: 3rem;
         }
 
-        /* Ledyard Bank section - make it span 2 columns and larger */
         .ledyard-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -148,21 +144,12 @@
             grid-column: 1;
         }
 
-        /* One Local and Cambridge College side by side above Ledyard */
-        .paired-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
         .video-card {
             background: var(--secondary);
             border: 1px solid var(--border);
             border-radius: 8px;
             overflow: hidden;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
             display: flex;
             flex-direction: column;
             height: 100%;
@@ -222,7 +209,6 @@
             color: var(--accent);
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -237,7 +223,7 @@
             }
 
             .videos-grid,
-            .paired-grid {
+            .two-column-feature {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
@@ -252,7 +238,6 @@
             }
         }
 
-        /* Footer */
         footer {
             border-top: 1px solid var(--border);
             padding: 2rem;
@@ -261,7 +246,6 @@
             font-size: 0.9rem;
         }
 
-        /* Scrollbar styling */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -278,6 +262,13 @@
         ::-webkit-scrollbar-thumb:hover {
             background: var(--accent-subtle);
         }
+
+        .two-column-feature {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
     </style>
 </head>
 <body>
@@ -289,99 +280,147 @@
 
     <main>
         <section class="projects">
-            <!-- Concord Hospital -->
             <div class="project-group">
                 <h2 class="org-title">Concord Hospital</h2>
                 <div class="videos-grid">
                     <div class="video-card">
                         <div class="video-iframe-container">
-                            <iframe src="https://player.vimeo.com/video/1064818742?h=&autoplay=0" allowfullscreen="" allow="autoplay" loading="lazy"></iframe>
+                            <iframe
+                                src="https://player.vimeo.com/video/1064818742?badge=0&autopause=0&player_id=0&app_id=58479"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                title="PeopleAreTalking_FINAL">
+                            </iframe>
                         </div>
                         <div class="video-info">
                             <h3 class="video-title">People are Talking</h3>
-                            <a href="https://vimeo.com/1064818742?fl=tl&fe=ec" target="_blank" class="video-link">Watch on Vimeo →</a>
+                            <a href="https://vimeo.com/1064818742" target="_blank" rel="noopener noreferrer" class="video-link">Watch on Vimeo →</a>
                         </div>
                     </div>
+
                     <div class="video-card">
                         <div class="video-iframe-container">
-                            <iframe src="https://player.vimeo.com/video/1032889549?h=&autoplay=0" allowfullscreen="" allow="autoplay" loading="lazy"></iframe>
+                            <iframe
+                                src="https://player.vimeo.com/video/1032889549?badge=0&autopause=0&player_id=0&app_id=58479"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                title="GiveItAShot_ Anthem">
+                            </iframe>
                         </div>
                         <div class="video-info">
                             <h3 class="video-title">Give it a Shot</h3>
-                            <a href="https://vimeo.com/1032889549?fl=tl&fe=ec" target="_blank" class="video-link">Watch on Vimeo →</a>
+                            <a href="https://vimeo.com/1032889549" target="_blank" rel="noopener noreferrer" class="video-link">Watch on Vimeo →</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- One Local and Cambridge College side by side with separate headers -->
-            <div class="project-group" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; margin-bottom: 3rem;">
+            <div class="project-group two-column-feature">
                 <div>
                     <h2 class="org-title">One Local</h2>
                     <div class="videos-grid" style="grid-template-columns: 1fr; margin-bottom: 0;">
                         <div class="video-card">
                             <div class="video-iframe-container">
-                                <iframe src="https://player.vimeo.com/video/855467404?h=&autoplay=0" allowfullscreen="" allow="autoplay" loading="lazy"></iframe>
+                                <iframe
+                                    src="https://player.vimeo.com/video/855467404?badge=0&autopause=0&player_id=0&app_id=58479"
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                    allowfullscreen
+                                    loading="lazy"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    title="OneLocal_Daily Routine">
+                                </iframe>
                             </div>
                             <div class="video-info">
                                 <h3 class="video-title">Daily Routine</h3>
-                                <a href="https://vimeo.com/855467404?fl=tl&fe=ec" target="_blank" class="video-link">Watch on Vimeo →</a>
+                                <a href="https://vimeo.com/855467404" target="_blank" rel="noopener noreferrer" class="video-link">Watch on Vimeo →</a>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div>
                     <h2 class="org-title">Cambridge College</h2>
                     <div class="videos-grid" style="grid-template-columns: 1fr; margin-bottom: 0;">
                         <div class="video-card">
                             <div class="video-iframe-container">
-                                <iframe src="https://player.vimeo.com/video/913371469?h=&autoplay=0" allowfullscreen="" allow="autoplay" loading="lazy"></iframe>
+                                <iframe
+                                    src="https://player.vimeo.com/video/913371469?badge=0&autopause=0&player_id=0&app_id=58479"
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                    allowfullscreen
+                                    loading="lazy"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    title="Cambridge College - School Days - 30">
+                                </iframe>
                             </div>
                             <div class="video-info">
                                 <h3 class="video-title">School Days</h3>
-                                <a href="https://vimeo.com/913371469?fl=tl&fe=ec" target="_blank" class="video-link">Watch on Vimeo →</a>
+                                <a href="https://vimeo.com/913371469" target="_blank" rel="noopener noreferrer" class="video-link">Watch on Vimeo →</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Ledyard Bank -->
             <div class="project-group">
                 <h2 class="org-title">Ledyard Bank</h2>
                 <div class="ledyard-grid">
                     <div class="video-card">
                         <div class="video-iframe-container">
-                            <iframe src="https://player.vimeo.com/video/933750428?h=&autoplay=0" allowfullscreen="" allow="autoplay" loading="lazy"></iframe>
+                            <iframe
+                                src="https://player.vimeo.com/video/933750428?badge=0&autopause=0&player_id=0&app_id=58479"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                title="Ledyard Bank - I Need More - 30">
+                            </iframe>
                         </div>
                         <div class="video-info">
                             <h3 class="video-title">I Need More</h3>
-                            <a href="https://vimeo.com/933750428?fl=tl&fe=ec" target="_blank" class="video-link">Watch on Vimeo →</a>
+                            <a href="https://vimeo.com/933750428" target="_blank" rel="noopener noreferrer" class="video-link">Watch on Vimeo →</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- CCSNH -->
             <div class="project-group">
                 <h2 class="org-title">CCSNH</h2>
                 <div class="videos-grid">
                     <div class="video-card">
                         <div class="video-iframe-container">
-                            <iframe src="https://player.vimeo.com/video/841896620?h=&autoplay=0" allowfullscreen="" allow="autoplay" loading="lazy"></iframe>
+                            <iframe
+                                src="https://player.vimeo.com/video/841896620?badge=0&autopause=0&player_id=0&app_id=58479"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                title="Choose Community">
+                            </iframe>
                         </div>
                         <div class="video-info">
                             <h3 class="video-title">Choose Community</h3>
-                            <a href="https://vimeo.com/841896620?fl=tl&fe=ec" target="_blank" class="video-link">Watch on Vimeo →</a>
+                            <a href="https://vimeo.com/841896620" target="_blank" rel="noopener noreferrer" class="video-link">Watch on Vimeo →</a>
                         </div>
                     </div>
+
                     <div class="video-card">
                         <div class="video-iframe-container">
-                            <iframe src="https://player.vimeo.com/video/885764508?h=&autoplay=0" allowfullscreen="" allow="autoplay" loading="lazy"></iframe>
+                            <iframe
+                                src="https://player.vimeo.com/video/885764508?badge=0&autopause=0&player_id=0&app_id=58479"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                title="CCSNH RollCall 30">
+                            </iframe>
                         </div>
                         <div class="video-info">
                             <h3 class="video-title">Roll Call</h3>
-                            <a href="https://vimeo.com/885764508?fl=tl&fe=ec" target="_blank" class="video-link">Watch on Vimeo →</a>
+                            <a href="https://vimeo.com/885764508" target="_blank" rel="noopener noreferrer" class="video-link">Watch on Vimeo →</a>
                         </div>
                     </div>
                 </div>
@@ -392,5 +431,7 @@
     <footer>
         <p>&copy; 2026 Big House Partners. All rights reserved.</p>
     </footer>
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
 </body>
 </html>
